@@ -1,0 +1,282 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro);
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+  /* ---------------This is start of my code-------------------*/
+  /* General page styling */
+* {
+  box-sizing: border-box;
+  max-width: 100%
+  border 1px solid yellow;
+}
+
+html {
+  font-size: 62.5%;
+
+}
+
+body {
+  background-color: gainsboro;
+  line-height: 1.5;
+  font-size: 1.8rem;
+}
+
+/* ------Header & NavBar Section Styling-------- */ 
+header {
+  text-align: center;
+  color: rgb(189, 103, 22);
+  font-family: 'Source Code Pro';
+  font-size: 4rem;
+  padding: 10px;
+}
+
+.nav-bar-container {
+  font-family: 'Source Code Pro';
+  padding: 1rem;
+  margin: 3%;
+}
+
+.nav-bar {
+  background-color: rgb(84, 96, 107);
+  padding: 10px;
+  margin: 3%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(189, 103, 22);
+  padding: .8px;
+  font-size: 1.5rem;
+  border: 5px outset darkorange;
+}
+
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/*--------Header Container Section Styling-------*/
+
+.image-container-header {
+  background: url('https://wallpaperaccess.com/full/1947431.jpg');
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.header-top {
+  margin-top: 2%;
+  font-size: 2rem;
+  text-align: center;
+}
+  
+.header-bottom {
+  font-size: 1.5rem;
+  margin: 2% 20%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+button {
+  font-family: 'Source Code Pro';
+  font-size: 1.5rem;
+  border: none;
+}
+
+button:hover{
+  border: 1px solid black;
+}
+
+/* --------Image gallery with text styling--------- */
+
+.image-container2 {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-around;
+}
+
+.flex-image {
+  width: 200px;
+  height: auto;
+}
+
+.image-content {
+  color: rgb(70, 74, 85);
+  font-size: 150%;
+  font-family: 'Source Code Pro';
+  width: 150px;
+  margin: 100px 100px;
+  align-items: center;
+
+}
+
+/*-------Footer Section Styling-------*/
+
+footer {
+  width: 100%;
+}
+
+footer .nav-bar {
+  display: flex;
+  flex-flow: row;
+  justify-content:flex-end;
+}
+
+/* --------This will be the viewport for 800px sized screens--------- */
+
+@media only screen and (max-width:800px) {
+
+  body {
+    width: auto;
+  }
+
+  .image-container-header {
+    height:700px;
+  }
+
+  .header-top h2 {
+    margin-bottom: 10%;
+  }
+ 
+  button {
+    font-size: 2.5rem;
+  }
+
+  .header-bottom {
+    margin: 0 10%;
+  }
+}
+
+
+
+/* --------This will be the viewport for 500px sized screens--------- */
+
+@media only screen and (max-width:500px) {
+
+  .nav-bar-container{
+    margin: 5%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-bar {
+    display: block;
+    width: 75%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    padding: 10px;
+    border: 7px outset darkorange;
+  }
+
+  .image-container-header {
+    background-position:center;
+    height: 600px;
+  }
+
+  .header-top {
+    margin-bottom: 10%;
+  }
+
+  .header-top h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2%;
+  }
+
+  .header-top h2 {
+    margin-bottom: 8%;
+    font-size: 1.3rem;
+  }
+
+  button{
+    font-size: 2rem;
+  }
+
+  .header-bottom {
+    margin: 10% 3%;
+  }
+
+  .image-container2 {
+    justify-content:space-evenly;
+    width:100%;
+  }
+  
+  .flex-image {
+    width: 150px;
+  }
+
+  .image-content {
+    font-size: 2rem;
+    margin: 3%;
+    align-items: center;
+  }
+
+  footer .nav-bar{
+    width: 100%;
+    font-size: 5rem;
+  }
+
+}
